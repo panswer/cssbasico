@@ -5,22 +5,35 @@
     Espacio -> Es el espacio que ocupa un elemento en el documento
 */
 
-.title {
+.box1,
+.box2 {
+    width: 250px;
+    height: 250px;
+    margin: 1em auto;
+    font-size: 2.5em;
     text-align: center;
-    font-size: 3em;
 }
 
-p {
-    font-size: 2em;
+.box1 {
+    background: lightgreen;
+    /* 
+        Con position relative podemos utilizar
+        top right bottom left z-index
+    */
+    position: relative;
+    /* 
+        top y left valen mas que bottom y right
+    */
+    /* top: 100px;
+    left: 50px; */
+    /* Si declaramos z-index automaticamente se dibuja por encima por encima por tener un valor mayor que el de por defecto (0) */
+    /* z-index: 0; */
+    /* right: -500px;
+    bottom: 30px; */
+    top: 500px;
 }
 
-.parrafo-1 {
-    /* 
-        visibility:hidden => Desaparece el elemento mas no quita el espacio reservado
-    */
-    /* visibility: hidden; */
-    /* 
-        display:none => Desaparece el elemento y el espacio reservado
-    */
-    display: none;
+.box2 {
+    background: lightcoral;
+    position: relative;
 }
