@@ -6,39 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi primera pagina web</title>
-    <link rel="stylesheet" href="./normalize.css">
+    <!-- <link rel="stylesheet" href="./normalize.css"> -->
     <link rel="stylesheet" href="./style-dist.css">
     <!-- 
-        Meotodologia BEM utilizada en CSS
-
-        Block (bloque) Es cualquier elemento autonomo y aislado de nuestro documento. Un menu, una galeria, un formulario, etc.
-
-        Los bloques se suelen denominar con una sola palabra o con dos palabras separadas con un guion si puede existir conflicto de estilos. (.menu / .main-menu)
-
-        Elment (elemento) Es cada uno de los elementos del bloque. Un link, una foto, un campo de texto, etc.
-
-        Los elementos se nombran con el nombre del bloque al que pertenecen y su nombre con dos guiones bajos '__'.(.menu__link / .main-menu__link)
-
-        Modifier (modificador) Cuando un bloque se repite en otro lugar de nuestra web pero con alguna modificacion. El color del text, el tamano de la fuente, etc.
-
-        Los modificadores se nombran con el nombre del bloque al que pertenecen y su modificador con dos guiones medios '--'.(.menu__item--active / .gallery__item--special)
+        BOX MODEL
+        contenido => Padding => Border => Outline => Margin
      -->
 </head>
 
 <body>
-    <h1 class="main-title">Metodologia BEM</h1>
-    <header class="header">
-        <nav>
-            <ul class="main-menu">
-                <li class="main-menu__item"><a href="#" class="main-menu__link">Item 1</a></li>
-                <li class="main-menu__item"><a href="#" class="main-menu__link main-menu__link--active">Item 2</a></li>
-                <li class="main-menu__item"><a href="#" class="main-menu__link">Item 3</a></li>
-                <li class="main-menu__item"><a href="#" class="main-menu__link">Item 4</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <!-- <h1>Box Model</h1>
+    <h2>Modelo de caja</h2>
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a> -->
+    <div class="box-1">contenido 1</div>
+    <div class="box-2">contenido 2</div>
 </body>
 
 </html>

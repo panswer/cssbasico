@@ -1,77 +1,35 @@
-.main-title {
-    text-align: center;
-}
-
-.header {
+h1 {
     background: lightblue;
-    height: 50px;
+    height: 150px;
+    width: 100px;
 }
 
-.main {
-    background: lightgreen;
-    height: 600px;
-}
-
-.footer {
-    background: lightsalmon;
-    height: 200px;
-}
-
-
-/* nav ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-nav ul li {
-    line-height: 3;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: green;
+h2 {
+    background: purple;
+    width: 50px;
 }
 
 a {
-    color: red;
-} */
-
-.main-menu {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
+    background: lime;
+    width: 300px;
+    height: 300px;
 }
 
-.main-menu__item {
-    line-height: 3;
+.box-1 {
+    width: 200px;
+    height: 200px;
+    background: lime;
+    padding: 10px;
+    /* Sus dimensiones cuentan para el tamano total */
+    border: 10px solid blue;
+    margin: 20px;
+    /* Sus dimensiones no cuentan para el tamano total */
+    /* No ocupa espacio */
+    /* outline: 10px solid blue; */
 }
 
-.main-menu__link {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: green;
+.box-2 {
+    width: 200px;
+    height: 200px;
+    background: lightcoral;
 }
-
-.main-menu__link--active {
-    background: red;
-}
-
-.main-form {}
-
-.main-form__label {}
-
-.main-form__submit {}
-
-.form {}
-
-.label {}
-
-.submit {}
