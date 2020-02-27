@@ -1,61 +1,38 @@
 /*
-    Position
+    DISPLAY
 
-    Flujo HTML -> Es el orden en el que aparecen los elementos en el documento
-    Espacio -> Es el espacio que ocupa un elemento en el documento
+    Nos permite definir como se comporta una caja.
+    De forma natural existen elementos en linea y elementos el bloque
+
+    Los valores de esta propiedad son:
+
+        inline - Establece que la caja se comporta como si fuera un elemento en linea
+
+        block - Establece que la caja se comporta como si fuera un elemento en bloque
+
+        inline-block - Se comporta como un elemento en linea pero acepta width y heigth
+
+        none - Oculta el elemento pero se sigue renderizando
+
+        table - Imita el comportamiento de una talba
+
+        list-item - Imita el comportamiento de una lista
+
+        CSS3
+        flex - maquetar componentes
+
+        grid - maquetar layout
 */
 
-.box {
-    width: 75px;
-    height: 75px;
-    font-size: 1.5em;
-    line-height: 75px;
-    text-align: center;
-    position: relative;
+.inline {
+    background: lime;
+    /* display: inline-block;
+    height: 400px;
+    margin-bottom: 2em; */
+    display: none;
 }
 
-.box1 {
-    background: darkcyan;
-    z-index: 30;
-}
-
-.box2 {
-    background: darkkhaki;
-    top: -38px;
-    left: 38px;
-    z-index: 20;
-}
-
-.box3 {
-    background: darkorchid;
-    top: -75px;
-    left: 75px;
-    z-index: 10;
-}
-
-.box4 {
-    background: darkgoldenrod;
-    top: -150px;
-    left: 50px;
-    z-index: 15;
-}
-
-.padre {
-    width: 200px;
-    height: 200px;
-    background: blue;
-    position: relative;
-    top: 30px;
-    /* Si se quiere colocar el hijo sobre el padre el padre no debe contener la propiedad z-index: y el hijo un z-index negativo */
-    /* z-index: 50; */
-}
-
-.hijo {
-    width: 50px;
-    height: 50px;
+.block {
     background: yellow;
-    position: relative;
-    top: -30px;
-    left: 150px;
-    z-index: -1;
+    margin: 0;
 }
