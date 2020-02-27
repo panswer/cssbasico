@@ -1,0 +1,6 @@
+La w3 diide la especificidad en:
+Etiqueta -  -   -   -   -   -   -   -   -   0,0,0,1
+Clases y pseudoclases   -   -   -   -   -   0,0,1,0
+ID  -   -   -   -   -   -   -   -   -   -   0,1,0,0
+Estilos en linea    -   -   -   -   -   -   1,0,0,0
+!important  -   -   -   -   -   -   -   -   Gana a todo
