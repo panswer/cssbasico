@@ -1,41 +1,26 @@
 /*
-    outline-width
-        px|em|rem|%|. . .
+    Position
 
-    outline-style
-        none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset|initial|inherit
-
-        *Estas medidas dependen del navegador
-        thick (ancho)
-        medium (medio)
-        thin (fino)
-
-    outline-color
-        css native|rgb|rgba|hsl|hsla|hexadecimal|transparent
-
-    outline-top-(width|style|color)
-    outline-right-(width|style|color)
-    outline-bottom-(width|style|color)
-    outline-left-(width|style|color)
+    Flujo HTML -> Es el orden en el que aparecen los elementos en el documento
+    Espacio -> Es el espacio que ocupa un elemento en el documento
 */
 
-.img-box {
-    width: 90%;
-    margin: 2em auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img {
-    border: 5px solid lightcoral;
-    outline: 5px solid lightcoral;
-    outline-offset: -45px;
-}
-
-.text {
-    position: absolute;
-    color: lightcoral;
+.title {
+    text-align: center;
     font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+}
+
+.parrafo-1 {
+    /* 
+        visibility:hidden => Desaparece el elemento mas no quita el espacio reservado
+    */
+    /* visibility: hidden; */
+    /* 
+        display:none => Desaparece el elemento y el espacio reservado
+    */
+    display: none;
 }
