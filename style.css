@@ -5,24 +5,57 @@
     Espacio -> Es el espacio que ocupa un elemento en el documento
 */
 
-.slide {
-    height: 300px;
-    background: grey;
-    font-size: 3em;
+.box {
+    width: 75px;
+    height: 75px;
+    font-size: 1.5em;
+    line-height: 75px;
     text-align: center;
-    line-height: 6em;
+    position: relative;
 }
 
-.menu {
+.box1 {
     background: darkcyan;
-    padding: 0.5em;
-    text-align: center;
-    font-size: 2em;
-    width: 100%;
-    position: sticky;
-    top: 0px;
+    z-index: 30;
 }
 
-.title {
-    margin: 0;
+.box2 {
+    background: darkkhaki;
+    top: -38px;
+    left: 38px;
+    z-index: 20;
+}
+
+.box3 {
+    background: darkorchid;
+    top: -75px;
+    left: 75px;
+    z-index: 10;
+}
+
+.box4 {
+    background: darkgoldenrod;
+    top: -150px;
+    left: 50px;
+    z-index: 15;
+}
+
+.padre {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    position: relative;
+    top: 30px;
+    /* Si se quiere colocar el hijo sobre el padre el padre no debe contener la propiedad z-index: y el hijo un z-index negativo */
+    /* z-index: 50; */
+}
+
+.hijo {
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    position: relative;
+    top: -30px;
+    left: 150px;
+    z-index: -1;
 }
