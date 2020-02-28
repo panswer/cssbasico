@@ -1,39 +1,129 @@
 /* 
-    Lasvariables necesitan estar dentro de un selector
+    Es una propiedad que no permite darle un fondo a las cajas
 
-    Tienen herencia y cascada
-
-    Existen variables globales y locales, dependera del selector en el que lo declaremos
-
-    Las variables CSS no son lo mismo que las vaviables SCSS
-
-    Su sintaxis es:
-    selector{
-        --nombre-variable:valor;
-    }
-    propiedad:var(--nombre-variable)
+    La propiedad background es un shorthand, la lista de propiedades que incluye background son:
+        - background-color: Nos permite establecer un color de fondo
+        - background-image: Nos permite establecer una imagen de fondo
+        - background-repeat: Nos permite establecer si un fondo se repite o no
+        - background-position: Nos permite establecer la posicion de background
+        - background-size: Nos permite establecer el tamano del background
+        - background-origen: Nos permite establecer en que parte de la caja se dibujara el fondo
+        - background-clip: Nos permite estblecer en que parte de la caja se dibujara el fondo
+        - background-attachment: Nos permite establecer si el background es relativo a la caja o al viewport
 */
 
-:root {
-    --color: blue;
-    --border: 3px solid yellow;
+
+/* 
+    background-color: Establece el color de fondo de la caja
+    background-image:url(ruta) establece la imagen de fondo de la caja
+    background-size: Establece el tamano de la imagen fondo
+        x[y]|auto|cover|contain.
+        -el valor en y es opcional, si no se lo ponemos lo calcula automaticamente
+        -cover cubre la caja por completo, aunque la imagen escape del contenedor
+        -contain la imagen se ajusta al contenido
+    background-position:Establece la posicion de la imagen, si no se especifica un segundo valor sera center
+        -left left
+            -left
+            -top
+            -center
+            -bottom
+        -x% y%
+        -xpos ypos
+        -initial
+        -inherit
+    background-repeat:Establece si la imagen se repite o no
+        repeat-x|repeat-y|no-repeat
+    
+    background-clip: Establece que parte de la caja rellenara el fondo
+        Muestra la imagen desde donde le decimos, solo oculta, no redimensiona
+        border-box|padding-box|content-box
+
+    background-origin: Establece donde comienza el fondo
+        Redimendiona la imagen para que ocupe la zona que le decimos
+        border-box|padding-box|content-box
+
+    background-attachment: Permite establecer si el fondo se coloca respecto a la caja o al viewport
+        scroll| fixed
+*/
+
+[class^="bg-"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    margin: 0 auto;
+    height: 150px;
+    border: 1px solid red;
+    position: relative;
 }
 
-.paragraph {
-    color: var(--color);
+body {
+    padding-bottom: 50em;
+    text-align: center;
 }
 
-.article {
-    --color: green;
+.bg-color {
+    background-color: purple;
 }
 
-.check:checked+.box {
-    --color: purple;
+.bg-image {
+    background-image: url('https://picsum.photos/200');
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    background: var(--color);
-    border: var(--border);
+.bg-size {
+    background-image: url('https://picsum.photos/200');
+    background-size: cover;
+}
+
+.bg-repeat {
+    background-image: url('https://picsum.photos/200');
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.bg-position {
+    background-image: url('https://picsum.photos/200');
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
+}
+
+.bg-repeat {
+    background-image: url('https://picsum.photos/200');
+    background-size: 20%;
+    background-repeat: no-repeat;
+}
+
+.bg-origin {
+    border: 10px dotted red;
+    padding: 25px;
+    background-image: url('https://picsum.photos/200');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+
+.bg-clip {
+    border: 10px dotted red;
+    background-image: url('https://picsum.photos/200');
+    background-size: contain;
+    padding: 15px;
+    background-repeat: no-repeat;
+    /* background-clip: padding-box; */
+    /* background-clip: border-box; */
+    background-clip: border-box;
+}
+
+.bg-attachment {
+    width: 100%;
+    height: 300px;
+    background-image: url('https://picsum.photos/200');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-multiple {
+    background-image: url('https://picsum.photos/id/227/200'), url('https://picsum.photos/id/230/200');
+    background-size: 10%, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right, right center;
 }
