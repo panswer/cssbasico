@@ -1,279 +1,39 @@
-/*
-    PSEUDOCLASES
+/* 
+    Lasvariables necesitan estar dentro de un selector
 
-    Son selectores que reaccionan en tiempo real detectando la interaccion del usuario con algunos elementos
+    Tienen herencia y cascada
 
-    Funcionan con todos los selectores de css
+    Existen variables globales y locales, dependera del selector en el que lo declaremos
 
-    No estan atados a ningun elemento
+    Las variables CSS no son lo mismo que las vaviables SCSS
 
     Su sintaxis es:
-        Con selector
-        selector:pseudoclase{
-            estilos
-        }
-        Sin selector
-        :pseudoclase{
-            estilos
-        }
-
-    Lista:
-    Dynamic
-        :link (links) - Link no visitado
-        :visited (links) - Link visitado
-        :active (links) - El momento del click
-        :hover - Al poner el mause sobre el elemento
-        :focus - Cuando el elemento tiene el foco
-
-    Target
-        :target - Elemento es objetivo de un marcador o ancla
-
-    Lenguage
-        :lang() - Elemento que contiene el atributo lang que especifiquemos
+    selector{
+        --nombre-variable:valor;
+    }
+    propiedad:var(--nombre-variable)
 */
 
-
-/* .link:link {
-    color: red;
+:root {
+    --color: blue;
+    --border: 3px solid yellow;
 }
 
-.link:visited {
-    color: chartreuse;
+.paragraph {
+    color: var(--color);
 }
 
-.link:active {
-    color: cyan;
-    background: red;
-} */
-
-
-/* .button {
-    text-decoration: none;
-    display: inline-block;
-    background: red;
-    padding: 0.5em;
-    border-radius: 10px;
-    color: #FFF;
+.article {
+    --color: green;
 }
 
-.title:hover {
-    color: blueviolet;
+.check:checked+.box {
+    --color: purple;
 }
 
-.button:active {
-    transform: scale(.9);
-}
-
-.button:hover {
-    color: red;
-    background: #FFF;
-    border: 1px solid;
-    border-radius: 10px;
-}
-
-.input:focus {
-    background: green;
-} */
-
-
-/* .menu {
-    background: lightblue;
-    display: block;
-    padding: 1em;
-    text-decoration: none;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.text {
-    margin-top: 500px;
-    margin-bottom: 500px;
-}
-
-.text:target {
-    padding-top: 75px;
-} */
-
-
-/* .span {
-    display: block;
-}
-
-.span:lang(en) {
-    color: red;
-}
-
-.span:lang(es) {
-    color: blue;
-} */
-
-
-/* 
-    UI States
-        :enabled
-        :disabled
-        :checked
-        :in-range
-        :out-of-range
-        :required
-        :optional
-        :valid
-        :invalid
-        :read-only
-        :read-write
-        :fullscreen
-*/
-
-
-/* 
-.input,
-.label {
-    display: block;
-}
-
-.input:enabled {
-    background: red;
-}
-
-.input:disabled {
-    background: yellow;
-    border: none;
-}
-
-.input:checked+label {
-    font-size: 2em;
-}
-
-.input:in-range {
-    background: green;
-}
-
-.input:out-of-range {
-    background: blue;
-}
-
-.input:optional {
-    background: purple;
-}
-
-.input:required {
-    background: lightcoral;
-}
-
-.input:valid {
-    background: green;
-}
-
-.input:invalid {
-    background: red;
-}
-
- */
-
-
-/* 
-    Structural
-        :root - Representa la raiz del documento (html) usando una pseudoclase tnemos mas especificidad que si usaramos html
-        
-        :empty - Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido
-        
-        - child
-            :first-child - Selecciona al primer hijo(Independientemente del tipo de etiqueta)
-            :last-child - Slecciona al ultimo hijo (Independientemente del tipo de etiqueta)
-
-            :nth-child(n) - Selecciona al hijo n (independientemente del tipo de etiqueta)
-            :nth-last-child(n) - Selecciona al hijo n empezando a contar desde el ultimo (independientemente del tipo de etiqueta)
-            :only-of-type - Selecciona al hijo unico (independientemente del tip de etiqueta)
-
-        - type
-            :first-of-type
-            :last-of-type
-            :nth-of-type()
-            :nth-last-of-type()
-            :only-of-type
-        
-        Valores posibles:
-            odd - Impares
-            aven - pares
-            numeros enteros - 2,3,4. . .
-            equaciones (1n,3n,4n+1,n+4,. . .)
-                n es un multiplicador va de 0 hasta n que se quede sin elementos para seleccionar
-
-    Negation
-        :not() - Selecciona el elemento que no cumpla la condicion, se puede cualquier selector salvo otro :not
-*/
-
-
-/* .paragraph {
-    padding: 0.5em;
-    background: lightblue;
-} */
-
-
-/* 
-    all:unset; reinicia los estilos aplicados a un elemento con direccionanmiento  izquierda derecha
-*/
-
-
-/* .paragraph:empty {
-    all: unset;
-} */
-
-
-/* .paragraph:first-child {
-    background: red;
-}
-
-.paragraph:last-child {
-    background: blue;
-} */
-
-
-/* .paragraph:nth-child(odd) {
-    background: lightcoral;
-} */
-
-
-/* .paragraph:nth-child(even) {
-    background: lightcoral;
-} */
-
-
-/* .paragraph:nth-child(2) {
-    background: lightcoral;
-} */
-
-
-/* n primero vale 0, despues 1, despues 2 y por ultimo 3 */
-
-
-/* .paragraph:nth-child(3n) {
-    background: lightcoral;
-} */
-
-
-/* .paragraph:nth-child(3n+1) {
-    background: lightcoral;
-} */
-
-
-/* .paragraph:nth-child(n+4) {
-    background: lightcoral;
-} */
-
-
-/* .paragraph:nth-child(n+4) {
-    background: lightcoral;
-} */
-
-
-/* .paragraph:only-child {
-    background: lightgreen;
-} */
-
-.paragraph:nth-of-type(3) {
-    background: red;
+.box {
+    width: 100px;
+    height: 100px;
+    background: var(--color);
+    border: var(--border);
 }
