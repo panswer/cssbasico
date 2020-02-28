@@ -1,1 +1,3 @@
-.title::first-letter{color:red;font-size:2em}.text::first-line{color:#00f}.inline::first-letter{color:red;font-size:2em}.text::selection{color:#0f0;background:red}.dolar::after,.dolar::before{display:block;content:'';width:20px;height:20px;background:red}
+.span{display:block}
+.span:lang(en){color:red}
+.span:lang(es){color:#00f}
