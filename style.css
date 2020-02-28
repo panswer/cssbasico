@@ -1,157 +1,68 @@
 /* 
-    TEXTOS Y  TIPOGRAFIAS
+    Normalmente necesitamos resetar los estilos po defecto de una lista
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
 
-    font-family
-    font-size
-    font-weight
-    font-style
+    Hay tres propiedades para las listas, se pueden aplicar al padre o a los elementos de la lista
 
-    text-transform
-    text-align
-    text-decoration
-    text-indent
+    list-style-type: Establece el estilo de vinetas
+        disc
+        circle
+        square
+        decimal
+        decimal-lending-zero
+        lower-roman
+        upper-roman
+        upper-roman
+        lower-greek
+        lower-latin
+        upper-latin
+        armenian
+        georgian
+        lower-alpha
+        upper-alpha
 
-    line-height
-    letter-spacing
+    list-style-position: Hace que las vinetas se coloquen dentro o por fuera del elemento
+        outside | inside
+
+    list-style-image: Pone una imagen en lugar de la vineta, no se suele utilizar porque hay formas mucho mas eficientes de hacerlo
+
+    Normalmente se suele usar el shorthand list-style
 */
 
 
-/* 
-    FONT
-        font-family: Establece la familia tipografica
-            Se utiliza el nombre propio de la fuente o una familia generica, se recomienda utilizar SIEMPRE fuentes de reserva ('Times New Roman', Times, Serif)
-
-        font-size: Establece el tamano de fuente
-            Se define en unidades:
-                ps: Pixeles(medida absoluta)
-                em: Medida relativa al context (al padre)
-                rem: medida relativa al html
-                %: medida relativa al tamano actual
-
-                vh: medida relativa al height del viewport
-                vw: medida relativa al width del viewport
-                vmin: medida relativa al valor minimo del viewport
-                vmax: medida relativa al valor maximo del viewport
-
-        font-weight: Establece el grosor de la fuente
-            bold | normal | 100-900
-        
-        font-style: Establece el estilo de la tipografia
-            normal | italic | oblique
-*/
-
-
-/* body {
-    font-size: 30px;
+/* .list {
+    list-style-type: lower-latin;
 } */
 
+.list {
+    list-style: none;
+    /* list-style-position: unset; */
+}
 
-/* font-size: 2em; */
 
-
-/* font-size: 10vmin; */
-
-
-/* .title {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: oblique;
+/* .list__item::before {
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url('https://picsum.photos/id/237/200/300');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 1em;
 } */
 
-
-/* 
-.span {
-    font-size: 300%;
-} */
-
-
-/* .paragraph {
-    font-weight: bold;
-} */
-
-
-/* 
-    TEXT
-        text-transform: Transforma el texto a mayusculas, minusculas, etc.
-            lowercase (minusculas) | uppercase (mayusculas) | capitalize (primera letra de cada palabra en mayusculas)
-
-        text-align: Alinea el texto del elemento a la izquierda, derecha, etc. SOLO ELEMENTOS DE BLOQUE (excepto en botones, que aunque sean de elementos en linea funciona).
-            center|left|right|justify
-
-        text-decoration: Establece la decoracion del texto
-            overline|line-throught|underline|none
-
-        text-indent: mueve la primera linea de un texto. SOLO ELEMENTOS DE BLOQUE
-*/
-
-
-/* 
-    OTHER
-        line-height: establece la altura de la linea
-
-        letter-spacing: establece la separacion de las letras con una medida en cualquier unidad
-*/
-
-
-/* 
-    Sitios gratuitos para fuentes
-    https://www.dafont.com/es/
-    https://www.1001fonts.com/
-*/
-
-
-/* .title {
-    text-transform: capitalize;
-}
-
-.paragraph {
-    text-align: justify;
-    text-indent: 50px;
-}
-
-.link {
-    text-decoration: none;
-} */
-
-
-/* .box {
-    width: 150px;
-    height: 150px;
-    background: red;
-}
-
-.box__item {
-    text-align: center;
-    line-height: 150px;
-}
-
-.paragraph {
-    letter-spacing: 5px;
-} */
-
-
-/* body {
-    font-family: 'Simonetta', Arial;
-}
-
-.title {
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
-}
-
-.paragraph {
-    font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
-} */
-
-
-/* 
-    Para conocer la fuente de una pagina
-        whatFont
-*/
-
-.title {
-    font-family: myFont, serif;
-}
-
-@font-face {
-    src: url('./assets/fonts/unforgotten_more/UnforgottenMore1.ttf');
-    font-family: 'myFont';
+.list__item {
+    /* display: inline-block;
+    background-image: url('https://picsum.photos/id/237/200/300');
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat; */
+    /* padding-right: 2em;
+    background: url('https://picsum.photos/id/237/200/300') 0 0 / contain no-repeat; */
+    /* background: red; */
+    float: left;
+    padding-right: 1em;
 }

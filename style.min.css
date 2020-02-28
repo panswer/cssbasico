@@ -1,2 +1,2 @@
-.title{font-family:myFont,serif}
-@font-face{src:url(assets/fonts/unforgotten_more/UnforgottenMore1.ttf);font-family:myFont}
+.list{list-style:none}
+.list__item{float:left;padding-right:1em}
