@@ -1,38 +1,56 @@
 /*
-    DISPLAY
+    PSEUDOELEMENTOS
 
-    Nos permite definir como se comporta una caja.
-    De forma natural existen elementos en linea y elementos el bloque
+    Se utilizan para dar estilo a partes especificos de un elemento.
+    La sintaxis es selector::pseudo-element{estilos}
 
-    Los valores de esta propiedad son:
+    ::first-line (Elemento de bloque)
 
-        inline - Establece que la caja se comporta como si fuera un elemento en linea
+    ::first-letter (Elemento de bloque)
+    
+    ::selection (Retirado de la especificacion)
 
-        block - Establece que la caja se comporta como si fuera un elemento en bloque
+    Nota: 
+        - La propiedad content es obligatoria
+        - Son elementos de linea por defecto
+        - Son hijos del elemento al que pertenecen
+    ::before
 
-        inline-block - Se comporta como un elemento en linea pero acepta width y heigth
+    ::after
 
-        none - Oculta el elemento pero se sigue renderizando
-
-        table - Imita el comportamiento de una tabla
-
-        list-item - Imita el comportamiento de una lista
-
-        CSS3
-        flex - maquetar componentes => Utilizable para menus
-
-        grid - maquetar layout => para la pagina en general
 */
 
-.inline {
-    background: lime;
-    /* display: inline-block;
-    height: 400px;
-    margin-bottom: 2em; */
-    display: none;
+.title::first-letter {
+    color: red;
+    font-size: 2em;
 }
 
-.block {
-    background: yellow;
-    margin: 0;
+.text::first-line {
+    color: blue;
 }
+
+.inline::first-letter {
+    color: red;
+    font-size: 2em;
+}
+
+.text::selection {
+    color: lime;
+    background: red;
+}
+
+.dolar::before,
+.dolar::after {
+    /* content: '$'; */
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+
+
+/* .dolar::after {
+    content: '.00';
+    content: '';
+} */

@@ -1,1 +1,1 @@
-.inline{background:lime;display:none}.block{background:yellow;margin:0}
+.title:first-letter{color:red;font-size:2em}.text:first-line{color:blue}.inline:first-letter{color:red;font-size:2em}.text::selection{color:lime;background:red}.dolar:after,.dolar:before{display:block;content:'';width:20px;height:20px;background:red}
