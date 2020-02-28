@@ -92,6 +92,13 @@
 */
 
 
+/* 
+    Sitios gratuitos para fuentes
+    https://www.dafont.com/es/
+    https://www.1001fonts.com/
+*/
+
+
 /* .title {
     text-transform: capitalize;
 }
@@ -105,7 +112,8 @@
     text-decoration: none;
 } */
 
-.box {
+
+/* .box {
     width: 150px;
     height: 150px;
     background: red;
@@ -118,4 +126,32 @@
 
 .paragraph {
     letter-spacing: 5px;
+} */
+
+
+/* body {
+    font-family: 'Simonetta', Arial;
+}
+
+.title {
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+.paragraph {
+    font-family: 'Open Sans Condensed', Arial, Helvetica, sans-serif;
+} */
+
+
+/* 
+    Para conocer la fuente de una pagina
+        whatFont
+*/
+
+.title {
+    font-family: myFont, serif;
+}
+
+@font-face {
+    src: url('./assets/fonts/unforgotten_more/UnforgottenMore1.ttf');
+    font-family: 'myFont';
 }
