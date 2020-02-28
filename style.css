@@ -274,11 +274,6 @@
     background: lightgreen;
 } */
 
-
-/* .paragraph:nth-of-type(3) {
+.paragraph:nth-of-type(3) {
     background: red;
-} */
-
-.paragraph:not(.first) {
-    background: green;
 }
