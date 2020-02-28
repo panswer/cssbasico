@@ -14,14 +14,14 @@
 
         none - Oculta el elemento pero se sigue renderizando
 
-        table - Imita el comportamiento de una talba
+        table - Imita el comportamiento de una tabla
 
         list-item - Imita el comportamiento de una lista
 
         CSS3
-        flex - maquetar componentes
+        flex - maquetar componentes => Utilizable para menus
 
-        grid - maquetar layout
+        grid - maquetar layout => para la pagina en general
 */
 
 .inline {
