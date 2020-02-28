@@ -97,7 +97,8 @@
     padding-top: 75px;
 } */
 
-.span {
+
+/* .span {
     display: block;
 }
 
@@ -107,7 +108,7 @@
 
 .span:lang(es) {
     color: blue;
-}
+} */
 
 
 /* 
@@ -121,8 +122,52 @@
         :optional
         :valid
         :invalid
+        :read-only
+        :read-write
         :fullscreen
 */
+
+.input,
+.label {
+    display: block;
+}
+
+.input:enabled {
+    background: red;
+}
+
+.input:disabled {
+    background: yellow;
+    border: none;
+}
+
+.input:checked+label {
+    font-size: 2em;
+}
+
+.input:in-range {
+    background: green;
+}
+
+.input:out-of-range {
+    background: blue;
+}
+
+.input:optional {
+    background: purple;
+}
+
+.input:required {
+    background: lightcoral;
+}
+
+.input:valid {
+    background: green;
+}
+
+.input:invalid {
+    background: red;
+}
 
 
 /* 
