@@ -1,2 +1,4 @@
-.list{list-style:none}
-.list__item{float:left;padding-right:1em}
+.table,.table__data,.table__head{border:1px solid #000;border-spacing:10px}
+.table{width:100%;empty-cells:hide}
+.table__data{background:#add8e6}
+.table-container{overflow-x:auto}

@@ -1,68 +1,53 @@
 /* 
-    Normalmente necesitamos resetar los estilos po defecto de una lista
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
+    table-layout: Define como se comportan las dimensiones de una tabla y los anchos de las "columnas"
+        automatic: Valor por defecto
+        
+        fixed: necesita un width declarado, si no se le da un ancho a cada columna se distribuye equitativamente
 
-    Hay tres propiedades para las listas, se pueden aplicar al padre o a los elementos de la lista
+    caption-side: Define donde coloca el caption de una tabla.
+        top: valor por defecto
+        bottom: se coloca al pie de la tabla
 
-    list-style-type: Establece el estilo de vinetas
-        disc
-        circle
-        square
-        decimal
-        decimal-lending-zero
-        lower-roman
-        upper-roman
-        upper-roman
-        lower-greek
-        lower-latin
-        upper-latin
-        armenian
-        georgian
-        lower-alpha
-        upper-alpha
+    border-spacing: Controla el espacio entre las celdas. Recibe una medida en cualquier unidad
 
-    list-style-position: Hace que las vinetas se coloquen dentro o por fuera del elemento
-        outside | inside
+    border-collapse: Controla si las celdas se mantienen juntas o separadas.
+        separate: valor por defecto
+        collapse: junta las celdas para no
 
-    list-style-image: Pone una imagen en lugar de la vineta, no se suele utilizar porque hay formas mucho mas eficientes de hacerlo
-
-    Normalmente se suele usar el shorthand list-style
+    empty-cells: controla que hacer con las celdas vacias
+        show: valor por defecto
+        hide: oculta las celdas vacias
 */
 
 
-/* .list {
-    list-style-type: lower-latin;
+/* .table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
 } */
 
-.list {
-    list-style: none;
-    /* list-style-position: unset; */
+
+/* .table {
+    caption-side: bottom;
+} */
+
+.table,
+.table__data,
+.table__head {
+    border: 1px solid black;
+    border-spacing: 10px;
 }
 
+.table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    empty-cells: hide;
+}
 
-/* .list__item::before {
-    content: '';
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    background-image: url('https://picsum.photos/id/237/200/300');
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-right: 1em;
-} */
+.table__data {
+    background: lightblue;
+}
 
-.list__item {
-    /* display: inline-block;
-    background-image: url('https://picsum.photos/id/237/200/300');
-    background-position: 0 0;
-    background-size: contain;
-    background-repeat: no-repeat; */
-    /* padding-right: 2em;
-    background: url('https://picsum.photos/id/237/200/300') 0 0 / contain no-repeat; */
-    /* background: red; */
-    float: left;
-    padding-right: 1em;
+.table-container {
+    overflow-x: auto;
 }
