@@ -40,21 +40,82 @@
             normal | italic | oblique
 */
 
-body {
+
+/* body {
     font-size: 30px;
-}
+} */
 
-.title {
+
+/* font-size: 2em; */
+
+
+/* font-size: 10vmin; */
+
+
+/* .title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* font-size: 2em; */
-    /* font-size: 10vmin; */
     font-style: oblique;
-}
+} */
 
+
+/* 
 .span {
-    /* font-size: 300%; */
+    font-size: 300%;
+} */
+
+
+/* .paragraph {
+    font-weight: bold;
+} */
+
+
+/* 
+    TEXT
+        text-transform: Transforma el texto a mayusculas, minusculas, etc.
+            lowercase (minusculas) | uppercase (mayusculas) | capitalize (primera letra de cada palabra en mayusculas)
+
+        text-align: Alinea el texto del elemento a la izquierda, derecha, etc. SOLO ELEMENTOS DE BLOQUE (excepto en botones, que aunque sean de elementos en linea funciona).
+            center|left|right|justify
+
+        text-decoration: Establece la decoracion del texto
+            overline|line-throught|underline|none
+
+        text-indent: mueve la primera linea de un texto. SOLO ELEMENTOS DE BLOQUE
+*/
+
+
+/* 
+    OTHER
+        line-height: establece la altura de la linea
+
+        letter-spacing: establece la separacion de las letras con una medida en cualquier unidad
+*/
+
+
+/* .title {
+    text-transform: capitalize;
 }
 
 .paragraph {
-    font-weight: bold;
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.link {
+    text-decoration: none;
+} */
+
+.box {
+    width: 150px;
+    height: 150px;
+    background: red;
+}
+
+.box__item {
+    text-align: center;
+    line-height: 150px;
+}
+
+.paragraph {
+    letter-spacing: 5px;
 }
