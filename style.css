@@ -1,57 +1,55 @@
 /* 
-    No existen propiedades para imagenes en CSS
+    object-fit: se usa para especificar como se debe cambiar el tamano de <img> o <video> para que se ajuste a su contenedor.
+        fill: valor por defecto.
+        contain: El contenido se ajusta hasta rellenar de forma horizontal o vertical el contenedor sin deformarse.
+        cover: El contenido se ajusta hasta rellenar de forma horizontal y vertical el contenedor sin deformarse.
+        none: El contenido de redimensiona y mantiene su tamano original mostrando solo el trozo de las dimensiones especificadas.
+        scale-down: Selecciona el menor de la comparacion entre none y contain.
 
-    1- Imagenes responsive. En el archivo base se recomienda poner esta regla
-        img{
-            max-width:100%;
-        }
-    
-    2- Las imagenes por defecto son elementos inline, esto causa un espacio por debajo debido a su line-height, se puede solucionar de dos formas
+    object-position: Coloca la imagen cuando este no se muestra completa en el contenedor.
 
-        Dando un line-height:0 al contenedor o un displayblock a la imagen
-
-    3- Centrado horizontal
-        imagen con display:block y margenes laterales automaticos
-        text-align: center, si la imagen no es de bloque
-
-    4- Centrado vertical
-        flexbox (la mejor opcion)
-        vertical-align: middle. A la imagen y al texto
+    filter:
+        none
+        blur(px): desenfoca la imagen.
+        brightness(%): Ajusta el brillo de la imagen siendo 1 e original. De 0 a 1 dan oscuridad y de 1 a n dan sobreexposicion.
+        contrast(%): Ajusta el contraste de la imagen siendo 1 el original. De 0 es negro y de 1 a n da mas contraste.
+        drop-shadow(h-shadow v-shadow blur (spread) color): Aplica una sombra paralela  la imagen.
+        grayscale(%): Convierte la imagen a escala de grises. 0 es el original y 1 seria blanco y negro completamente.
+        hue-rotate(deg): Anade matriz de color a la imagen. Se da un valor en grados segun la rueda comatica. El valor maximo es 360deg.
+        invert(%): Invierte el color de la imagen. Sava un negativo. 0 es el valor por defecto y 1 es totalmente invertida.
+        opacity(%): Controla la opacidad de la imagen. 1 es el valor por defecto y 0 es transparente.
+        saturate(%): Controla la saturacion de color de la imagen. 1 es el valor por defecto. 0 es totalmente desaturado y por encima se sobresatura.
+        sepia(%): Aplica un tono sepia a la imagen. 0 es el valor por defecto y 1 es totalmente sepia.
 */
 
 
 /* .img {
+    width: 250px;
+    height: 450px;
+    background-color: red;
+    object-fit: cover;
+    object-position: left;
+    transition: object-position 2s;
+}
+
+.img:hover {
+    object-position: right;
+} */
+
+.img-2 {
     max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* filter: brightness(.5); */
+    /* filter: contrast(2); */
+    /* filter: drop-shadow(10px 10px 5px black); */
+    /* filter: grayscale(1); */
+    /* filter: hue-rotate(15deg); */
+    /* filter: invert(.7); */
+    /* filter: opacity(.5); */
+    /* filter: saturate(0); */
+    filter: sepia(1);
 }
 
-.img-container {
-    background: lavender;
-    text-align: center;
-}
-
-.img-container .img,
-.img-container .span {
-    vertical-align: middle;
-} */
-
-
-/* .img-container .img,
-img.img-container .span {
-    vertical-align: middle;
-}
-
-.img-container {
-    display: table;
-}
-
-.img-container .span {
-    display: table-cell;
-} */
-
-.img-container {
-    display: flex;
-    align-items: center;
+.img-2:hover {
+    /* filter: blur(10px); */
+    filter: none;
 }
