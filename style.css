@@ -1,55 +1,41 @@
 /* 
-    object-fit: se usa para especificar como se debe cambiar el tamano de <img> o <video> para que se ajuste a su contenedor.
-        fill: valor por defecto.
-        contain: El contenido se ajusta hasta rellenar de forma horizontal o vertical el contenedor sin deformarse.
-        cover: El contenido se ajusta hasta rellenar de forma horizontal y vertical el contenedor sin deformarse.
-        none: El contenido de redimensiona y mantiene su tamano original mostrando solo el trozo de las dimensiones especificadas.
-        scale-down: Selecciona el menor de la comparacion entre none y contain.
+    clip-path: Es una mascara que oculta partes de una caja
+        circle(): Dibuja un circulo, puede tener una medida fija, circle(100px) o podemor especificar un centro con at, circle(100px at medidaX | medidaY | palabrasClaveX | palabrasClaveY)
+        
+        ellipse(): Dibuja un elipse, funciona igual que el circulo, pero en este caso tenemos que especificar 2 centros, el orizontal y el vertical.
 
-    object-position: Coloca la imagen cuando este no se muestra completa en el contenedor.
+        inset(): Dibuja un borde transparente por dentro de la caja
+            inset(all | Y X | top X bottom | top left bottom right)
+            existe la opcion de redondear las esquinas, para ello despues de los valores de inset pondremo round.
+            inset( *** round all |
+                top-left bottom-right top right bottom-left |
+                top-left top-right & bottom-left bottom-right
+                top-left top-right bottom-right bottom-left
+            )
+        polygon(): Especifica una serie de puntos (minimo 3) para definir la zona visible siendo el punto 0 0 la esquina superior izquierda los puntos se especifican por parejas de ejex y ejey
 
-    filter:
-        none
-        blur(px): desenfoca la imagen.
-        brightness(%): Ajusta el brillo de la imagen siendo 1 e original. De 0 a 1 dan oscuridad y de 1 a n dan sobreexposicion.
-        contrast(%): Ajusta el contraste de la imagen siendo 1 el original. De 0 es negro y de 1 a n da mas contraste.
-        drop-shadow(h-shadow v-shadow blur (spread) color): Aplica una sombra paralela  la imagen.
-        grayscale(%): Convierte la imagen a escala de grises. 0 es el original y 1 seria blanco y negro completamente.
-        hue-rotate(deg): Anade matriz de color a la imagen. Se da un valor en grados segun la rueda comatica. El valor maximo es 360deg.
-        invert(%): Invierte el color de la imagen. Sava un negativo. 0 es el valor por defecto y 1 es totalmente invertida.
-        opacity(%): Controla la opacidad de la imagen. 1 es el valor por defecto y 0 es transparente.
-        saturate(%): Controla la saturacion de color de la imagen. 1 es el valor por defecto. 0 es totalmente desaturado y por encima se sobresatura.
-        sepia(%): Aplica un tono sepia a la imagen. 0 es el valor por defecto y 1 es totalmente sepia.
+        generador de clip-path: http://bennettfeely.com/clippy/
 */
 
-
-/* .img {
-    width: 250px;
-    height: 450px;
-    background-color: red;
-    object-fit: cover;
-    object-position: left;
-    transition: object-position 2s;
+body {
+    background: #333;
 }
 
-.img:hover {
-    object-position: right;
-} */
-
-.img-2 {
-    max-width: 100%;
-    /* filter: brightness(.5); */
-    /* filter: contrast(2); */
-    /* filter: drop-shadow(10px 10px 5px black); */
-    /* filter: grayscale(1); */
-    /* filter: hue-rotate(15deg); */
-    /* filter: invert(.7); */
-    /* filter: opacity(.5); */
-    /* filter: saturate(0); */
-    filter: sepia(1);
+.box {
+    width: 400px;
+    height: 400px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.img-2:hover {
-    /* filter: blur(10px); */
-    filter: none;
+.box__item {
+    background: lightcoral;
+    width: 400px;
+    height: 400px;
+    /* clip-path: circle(100px at top left); */
+    /* clip-path: ellipse(100px 50px at bottom right); */
+    /* clip-path: inset(20px round 20px); */
+    /* clip-path: polygon(50% 0, 0 100%, 100% 100%); */
+    clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%);
 }
